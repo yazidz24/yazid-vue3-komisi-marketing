@@ -1,7 +1,7 @@
 <script setup>
-import IndexHome from '@/components/IndexHome.vue'
+import DataKomisi from '@/components/DataKomisi.vue'
 </script>
 
 <template>
-  <IndexHome/>
+  <DataKomisi/>
 </template>
