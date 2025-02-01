@@ -1,7 +1,7 @@
 <script setup>
 import { useStore } from 'vuex'
 import { computed, onMounted } from 'vue'
-
+import { RouterLink } from 'vue-router'
 const store = useStore()
 
 onMounted(()=>{
@@ -14,6 +14,11 @@ const listPenjualan = computed(()=>{
 </script>
 <template>
   <div class="container-fluid mt-5">
+    <div class="card mb-3">
+      <div class="card-body">
+        <RouterLink class="btn btn-success" :to="{name: 'penjualan.add'}">+ Tambah Data Penjualan</RouterLink>
+      </div>
+    </div>
     <table class="table table-striped">
       <thead>
         <tr>
