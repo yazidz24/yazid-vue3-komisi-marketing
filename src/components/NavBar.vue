@@ -22,6 +22,9 @@ const route = useRoute()
             <li class="nav-item">
               <RouterLink class="nav-link text-dark" :class="[route.name == 'marketing' ? 'active fw-bold' : '']" :to="{name: 'marketing'}">Marketing</RouterLink>
             </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link text-dark" :class="[route.name == 'kredit' ? 'active fw-bold' : '']" :to="{name: 'kredit'}">Kredit</RouterLink>
+            </li>
           </ul>
         </div>
         <div class="d-flex">

@@ -20,7 +20,6 @@ const listMarketing = computed(()=>{
 
           <th class="bg-dark text-white">No.</th>
           <th class="bg-dark text-white">Marketing</th>
-          <th class="bg-dark text-white">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -28,10 +27,6 @@ const listMarketing = computed(()=>{
 
           <td>{{ index+1 }}.</td>
           <td>{{ marketing.name }}</td>
-          <td>
-            <button class="btn btn-primary btn-sm">Edit</button>
-            <button class="btn btn-danger btn-sm">Delete</button>
-          </td>
         </tr>
       </tbody>
 </table>

@@ -24,7 +24,6 @@ const listKomisi = computed(()=>{
           <th class="bg-dark text-white">Omzet</th>
           <th class="bg-dark text-white">Komisi (%)</th>
           <th class="bg-dark text-white">Komisi Nasional</th>
-          <th class="bg-dark text-white">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -36,10 +35,6 @@ const listKomisi = computed(()=>{
           <td>{{ moneyFormat(komisi.omset) }}</td>
           <td>{{ komisi.komisi }}</td>
           <td>{{ moneyFormat(komisi.komisi_nasional) }}</td>
-          <td>
-            <button class="btn btn-primary btn-sm">Edit</button>
-            <button class="btn btn-danger btn-sm">Delete</button>
-          </td>
         </tr>
       </tbody>
 </table>

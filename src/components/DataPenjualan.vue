@@ -11,6 +11,11 @@ onMounted(()=>{
 const listPenjualan = computed(()=>{
   return store.getters['penjualan/listPenjualan']
 })
+
+function hapus(id){
+  store.dispatch('penjualan/deletePenjualan',id)
+}
+
 </script>
 <template>
   <div class="container-fluid mt-5">
@@ -46,8 +51,9 @@ const listPenjualan = computed(()=>{
           <td>{{ moneyFormat(penjualan.total_balance) }}</td>
           <td>{{ moneyFormat(penjualan.grand_total) }}</td>
           <td>
-            <button class="btn btn-primary btn-sm">Edit</button>
-            <button class="btn btn-danger btn-sm">Delete</button>
+            <RouterLink class="btn btn-primary btn-sm" :to="{name: 'penjualan.edit', params: {id : penjualan.id}}">Edit</RouterLink>
+            <button class="btn btn-danger btn-sm" @click.prevent="hapus(penjualan.id)">Delete</button>
+            <RouterLink class="btn btn-dark btn-sm" :to="{name: 'kredit.add', params: {id : penjualan.id}}">Pembayaran Kredit</RouterLink>
           </td>
         </tr>
       </tbody>
